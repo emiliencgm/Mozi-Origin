@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "G:/刘健/moziai-master/moziai-master-new-scene-HM/mozi_ai_sdk/bt_test_HM/main_versus.py", line 81, in <module>
+    main()
+  File "G:/刘健/moziai-master/moziai-master-new-scene-HM/mozi_ai_sdk/bt_test_HM/main_versus.py", line 77, in main
+    run(env)
+  File "G:/刘健/moziai-master/moziai-master-new-scene-HM/mozi_ai_sdk/bt_test_HM/main_versus.py", line 49, in run
+    agent.update_bt(side_name, env.scenario)
+  File "G:\刘健\moziai-master\moziai-master-new-scene-HM\mozi_ai_sdk\bt_test_HM\utils\bt_agent_antiship.py", line 73, in update_bt
+    return self.bt.run(side_name, scenario)
+  File "G:\刘健\moziai-master\moziai-master-new-scene-HM\mozi_ai_sdk\btmodel\bt\bt_nodes.py", line 38, in sequence
+    if self.wrap(v.run(side_name, scenario)) == self.results['fail']:
+  File "G:\刘健\moziai-master\moziai-master-new-scene-HM\mozi_ai_sdk\btmodel\bt\bt_nodes.py", line 44, in select
+    if self.wrap(v.run(side_name, scenario)) == self.results['success']:
+  File "G:\刘健\moziai-master\moziai-master-new-scene-HM\mozi_ai_sdk\btmodel\bt\bt_nodes.py", line 44, in select
+    if self.wrap(v.run(side_name, scenario)) == self.results['success']:
+  File "G:\刘健\moziai-master\moziai-master-new-scene-HM\mozi_ai_sdk\bt_test_HM\utils\leaf_nodes_eg.py", line 390, in update_patrol_mission
+    airs_xl1 = {k: airs[k] for k, v in airs.items() if v.strName in lst_1}
+AttributeError: 'list' object has no attribute 'items'

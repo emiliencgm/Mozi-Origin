@@ -1,0 +1,24 @@
+Traceback (most recent call last):
+  File "G:/刘健/moziai-master/moziai-master-fihaisea/mozi_ai_sdk/feihai_blue/main_versus.py", line 81, in <module>
+    main()
+  File "G:/刘健/moziai-master/moziai-master-fihaisea/mozi_ai_sdk/feihai_blue/main_versus.py", line 77, in main
+    run(env)
+  File "G:/刘健/moziai-master/moziai-master-fihaisea/mozi_ai_sdk/feihai_blue/main_versus.py", line 47, in run
+    env.step()
+  File "G:\刘健\moziai-master\moziai-master-fihaisea\mozi_ai_sdk\base_env.py", line 69, in step
+    self.situation = self.mozi_server.update_situation(self.scenario, self.app_mode)
+  File "G:\刘健\moziai-master\moziai-master-fihaisea\mozi_simu_sdk\mozi_server.py", line 457, in update_situation
+    return scenario.situation.update_situation(self, scenario, app_mode)
+  File "G:\刘健\moziai-master\moziai-master-fihaisea\mozi_simu_sdk\situation.py", line 344, in update_situation
+    update_data = mozi_server.send_and_recv("UpdateState")
+  File "G:\刘健\moziai-master\moziai-master-fihaisea\mozi_simu_sdk\mozi_server.py", line 231, in send_and_recv
+    response = self.grpc_client.GrpcConnect(GRPCServerBase_pb2.GrpcRequest(name=cmd), timeout=30)
+  File "F:\软件\python\3.8.5\lib\site-packages\grpc\_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "F:\软件\python\3.8.5\lib\site-packages\grpc\_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.DEADLINE_EXCEEDED
+	details = "Deadline Exceeded"
+	debug_error_string = "{"created":"@1650532177.174000000","description":"Error received from peer ipv4:127.0.0.1:6060","file":"src/core/lib/surface/call.cc","file_line":1070,"grpc_message":"Deadline Exceeded","grpc_status":4}"
+>

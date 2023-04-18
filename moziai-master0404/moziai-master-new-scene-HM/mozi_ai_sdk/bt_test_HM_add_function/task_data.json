@@ -1,0 +1,22 @@
+{
+    "task1": {
+        "type": "patrol",
+        "unit_name": ["Udoshi #9", "Udoshi #10"],
+        "point": [25.6116881713478, 124.964210157727]
+    },
+    "task2": {
+        "type": "air_attack",
+        "unit_name": ["Champion #8"],
+        "target": [
+            "052D"
+        ]
+    },
+    "task3": {
+        "type": "ship_attack",
+        "unit_name": ["巡洋舰"],
+        "target": [
+            "052D"
+        ]
+    },
+    "quit": 0
+}

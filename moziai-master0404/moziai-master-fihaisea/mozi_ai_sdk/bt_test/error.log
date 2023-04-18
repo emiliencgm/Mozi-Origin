@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "G:/刘健/moziai-master/moziai-master/mozi_ai_sdk/bt_test/main_versus.py", line 82, in <module>
+    main()
+  File "G:/刘健/moziai-master/moziai-master/mozi_ai_sdk/bt_test/main_versus.py", line 78, in main
+    run(env)
+  File "G:/刘健/moziai-master/moziai-master/mozi_ai_sdk/bt_test/main_versus.py", line 35, in run
+    env.start()
+  File "G:\刘健\moziai-master\moziai-master\mozi_ai_sdk\base_env.py", line 127, in start
+    self.mozi_server.set_run_mode(self.synchronous)
+  File "G:\刘健\moziai-master\moziai-master\mozi_simu_sdk\mozi_server.py", line 373, in set_run_mode
+    return self.send_and_recv("SETRUNMODE(FALSE)")
+  File "G:\刘健\moziai-master\moziai-master\mozi_simu_sdk\mozi_server.py", line 229, in send_and_recv
+    response = self.grpc_client.GrpcConnect(GRPCServerBase_pb2.GrpcRequest(name=cmd), timeout=30)
+  File "F:\软件\python\3.8.5\lib\site-packages\grpc\_channel.py", line 946, in __call__
+    return _end_unary_response_blocking(state, call, False, None)
+  File "F:\软件\python\3.8.5\lib\site-packages\grpc\_channel.py", line 849, in _end_unary_response_blocking
+    raise _InactiveRpcError(state)
+grpc._channel._InactiveRpcError: <_InactiveRpcError of RPC that terminated with:
+	status = StatusCode.UNAVAILABLE
+	details = "failed to connect to all addresses"
+	debug_error_string = "{"created":"@1648776095.539000000","description":"Failed to pick subchannel","file":"src/core/ext/filters/client_channel/client_channel.cc","file_line":3187,"referenced_errors":[{"created":"@1648776095.539000000","description":"failed to connect to all addresses","file":"src/core/lib/transport/error_utils.cc","file_line":146,"grpc_status":14}]}"
+>

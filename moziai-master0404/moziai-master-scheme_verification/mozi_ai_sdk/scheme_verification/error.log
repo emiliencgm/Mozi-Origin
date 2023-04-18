@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "G:/刘健/moziai-master/moziai-master-new-zhou/mozi_ai_sdk/zhou/main_versus.py", line 79, in <module>
+    main()
+  File "G:/刘健/moziai-master/moziai-master-new-zhou/mozi_ai_sdk/zhou/main_versus.py", line 75, in main
+    run(env)
+  File "G:/刘健/moziai-master/moziai-master-new-zhou/mozi_ai_sdk/zhou/main_versus.py", line 46, in run
+    all_first_group_list = get_group_first(side_name, env.scenario)
+  File "G:\刘健\moziai-master\moziai-master-new-zhou\mozi_ai_sdk\zhou\leaf_nodes_eg.py", line 38, in get_group_first
+    print('airs_1_for_name=',airs_dic[airs_1_for_key].strName)
+TypeError: unhashable type: 'list'
