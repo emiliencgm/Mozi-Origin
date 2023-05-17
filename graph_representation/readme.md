@@ -1,4 +1,4 @@
-#图表示模块使用说明
+# 图表示模块使用说明
 1. 目录设置：将graph_representation文件夹置于和main_versus.py同级。
 
 2. 在main_versus.py中加入`from graph_representation.graph_main import Graph`导入接口类。
@@ -11,7 +11,7 @@
 
 6. 在命令行使用`tensorboard --logdir=graph_representation/runs`(以Windows系统格式的目录为例)来观察TensorBoard实时反馈的模型权重训练结果。
 
-#各文件说明
+# 各文件说明
 - graph_parse.py：传递图表示模块的参数
 
 - graph_main.py：图表示模块的接口类
@@ -34,7 +34,7 @@
 
 - encoder_GNN_weights.pth.tar：存放模型参数
 
-##建图说明
+## 建图说明
 ```python
 #目前版本选择的节点类型
 self.admissible_node_type = ['aircrafts', 'facilities', 'ships', 'submarines', 'weapons', 'satellites']
@@ -62,7 +62,7 @@ self.attr_vector_list_satellites = []
 self.admissible_edge_type = ['m_CurrentHostUnit(facility-->aircraft)', 'm_FiringUnitGuid(unit-->weapon)', 'm_PrimaryTargetGuid(weapon-->target)']
 ```
 
-###将属性转换为浮点数的规定
+### 将属性转换为浮点数的规定
 - side属性值己方为1. 敌方为2.
 
 - bool转为0./1.
@@ -73,11 +73,11 @@ self.admissible_edge_type = ['m_CurrentHostUnit(facility-->aircraft)', 'm_Firing
 
 - ……
 
-##图神经网络说明
+## 图神经网络说明
 - 借助torch_geometric包（PyG）实现GCN，其架构为：
 > Conv(input_dim, 32) &rarr; relu &rarr; Conv(32,32) &rarr; relu &rarr; Conv(32,output_dim)
 
-##图对比学习框架说明
+## 图对比学习框架说明
 - 提供的数据增强方法：
     - edge_drop：以一定的比例随机删去一些边
     
@@ -85,7 +85,7 @@ self.admissible_edge_type = ['m_CurrentHostUnit(facility-->aircraft)', 'm_Firing
 
 - InfoNCE loss：采用BC loss源代码的实现方法（https://github.com/anzhang314/BC-Loss.git）
 
-##训练模式说明
+## 训练模式说明
 - 在墨子的推演前初始化GNN编码器（可加载预训练的参数）
 
 - 在推演的每一轮，首先建立当前的态势图（并转换为PyG的数据格式），然后利用对比学习框架进行数据增强，接着使用InfoNCE损失对上述GNN编码器进行自监督的训练
@@ -94,7 +94,7 @@ self.admissible_edge_type = ['m_CurrentHostUnit(facility-->aircraft)', 'm_Firing
 
 - 每训练一定轮次，会用训练后的GNN编码器来对当前的态势图进行图嵌入，使用可视化模块对嵌入结果和图结构进行可视化
 
-##可视化说明
+## 可视化说明
 - t_SNE：对节点属性和节点embedding两种高维向量进行低维可视化
 
 - nxnetworkx：基于t_SNE的降维结果将图上的节点表示在二维平面，并连上边；以我方为蓝方为例，红色为观测到的敌方，黄色为未观测到的敌方
