@@ -1,5 +1,6 @@
 # Graph_Representation 
 墨子态势图对比学习及可视化模块代码包
+![本地路径](Graph_Representation.png "墨子图表示模块架构图")
 
 ## 图表示模块使用说明
 1. 目录设置：将graph_representation文件夹置于和main_versus.py同级。
